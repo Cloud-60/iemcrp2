@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d9e2f3;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Header & Logout */
+.main-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.header-logo {
+    max-width: 100%;
+    height: 80px;
+}
+
+.logout-container {
+    text-align: right;
+    margin-top: -20px;
+}
+
+.logout-link {
+    color: #4b0082;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Info Bars */
+.welcome-bar {
+    background-color: #c5d9f1;
+    /* border-top: 2px solid #8eb4e3; */
+    /* border-bottom: 2px solid #8eb4e3; */
+    text-align: center;
+    /* padding: 5px; */
+    /* font-weight: bold; */
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+.notifications {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+/* Layout */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* border: 1px solid black; */
+}
+
+/* Sidebar Buttons */
+.sidebar {
+    flex: 0 0 200px;
+    /* border: 1px solid black; */
+}
+
+.module-title {
+    color: #4b0082;
+    margin-bottom: 10px;
+}
+
+.module-buttons button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(to bottom, #081b46, #0fdbed);
+    color: white;
+    border: 2px solid #ccc;
+    padding: 10px 5px;
+    text-align: left;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 2px;
+    font-weight: 500;
+    border: 1px solid black;
+}
+
+/* .module-buttons button:hover {
+    filter: brightness(1.2);
+} */
+
+/* Content Area & Timetable */
+.content-area {
+    flex: 1;
+    /* min-width: 300px; */
+    /* max-width: 800px; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 300px;
+}
+
+.profile-card {
+    background-color: #8eaadb;
+    border: 1px solid #4472c4;
+    /* width: 800px; */
+}
+
+.profile-header {
+    background-color: #8eaadb;
+    text-align: center;
+    /* padding: 10px; */
+    /* max-width: 150px; */
+}
+
+.student-photo {
+    width: 80px;
+    height: 100px;
+    /* border: 1px solid #000; */
+}
+
+.timetable-header {
+    background-color: #c4d79b;
+    color: #4b0082;
+    font-weight: bold;
+    /* padding: 5px; */
+    font-size: 13px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #d9d9d9;
+    border: none; border-collapse: collapse;
+}
+
+.timetable th {
+    background-color: #000033;
+    color: white;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #888;
+}
+
+.timetable td {
+    border: 1px solid #888;
+    height: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex: 1 1 100%;
+    }
+}
