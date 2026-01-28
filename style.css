@@ -1,197 +1,173 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.main-container {
-  background-color: rgb(211, 230, 252);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  /* border: 1px solid black; */
+body {
+    background-color: #d9e2f3;
+    padding: 10px;
+    font-size: 14px;
 }
 
-nav {
-  width: 100%;
-  height: 80px;
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Header & Logout */
+.main-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
 }
 
-nav img {
-  width: 75%;
-  height: auto;
-  /* border: 1px solid black; */
-  margin: 1rem;
-}
-
-.logout {
-  /* border: 1px solid black; */
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
-}
-.logout a {
-  font-size: 10px;
-}
-
-.welcome {
-  background-color: rgb(184, 218, 246);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 7px;
-  width: 100%;
-}
-
-.warning {
-  color: red;
-  font-size: 7px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-.photo {
-  font-size: 7px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  margin-top: 5px;
-}
-
-.main-dashboard {
-  width: 100%;
-  height: auto;
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.module {
-  /* border: 1px solid black; */
-  width: 100%;
-}
-
-.module{
-    color: purple;
-    font-weight: 600;
-    font-size: 10px;
-}
-.main-dashboard-content-container {
-  /* border: 1px solid black; */
-  width: 100%;
-  height: 300px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-column-buttons-container {
-  width: 25%;
-  /* border: 1px solid black; */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  align-items: center;
-}
-.right-column-container {
-  width: 75%;
-  /* border: 1px solid black; */
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.button {
-  height: 30px;
-  width: 80%;
-  /* padding: 8px; */
-  margin: 2px;
-  background: linear-gradient(to bottom, #052b3d 0%, #0088b9 50%, #87c1dc 100%);
-
-  border: 1.5px solid #003a54;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
-
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  font-size: 5px;
-  text-decoration: none;
-
-  cursor: pointer;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center; 
-  margin-bottom: 4px;
-}
-
-.main-student-details-card{
-    border: 1px solid rgb(160, 160, 160);
-    width: 80%;
+.header-logo {
+    max-width: 100%;
     height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    background-color: rgb(158, 190, 245);
 }
 
-.main-student-details-card img{
-    height: 45%;
-    width: auto;
+.logout-container {
+    text-align: right;
+    margin-top: -20px;
 }
-.p1{
-    font-size: 5px;
-    background-color: rgb(211, 230, 252);
-    width: 100%;
+
+.logout-link {
+    color: #4b0082;
+    font-weight: bold;
+    text-decoration: underline;
 }
-.p2{
-    font-size: 5px;
-    background-color: rgb(0, 25, 53);
-    width: 100%;
-    color: rgb(255, 255, 194);
+
+/* Info Bars */
+.welcome-bar {
+    background-color: #c5d9f1;
+    /* border-top: 2px solid #8eb4e3; */
+    /* border-bottom: 2px solid #8eb4e3; */
+    text-align: center;
+    /* padding: 5px; */
+    /* font-weight: bold; */
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+.notifications {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+/* Layout */
+.dashboard-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* border: 1px solid black; */
+}
+
+/* Sidebar Buttons */
+.sidebar {
+    flex: 0 0 200px;
+    /* border: 1px solid black; */
+}
+
+.module-title {
+    color: #4b0082;
+    margin-bottom: 10px;
+}
+
+.module-buttons button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(to bottom, #081b46, #0fdbed);
+    color: white;
+    border: 2px solid #ccc;
+    padding: 10px 5px;
+    text-align: left;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 2px;
+    font-weight: 500;
     border: 1px solid black;
-    justify-content: space-between;
-
 }
-.time-table-content{
-    background-color: rgb(214, 211, 206);
-    width: 100%;
-    height: 40%;
+
+/* .module-buttons button:hover {
+    filter: brightness(1.2);
+} */
+
+/* Content Area & Timetable */
+.content-area {
+    flex: 1;
+    /* min-width: 300px; */
+    /* max-width: 800px; */
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    font-size: 5px;
+    padding-right: 300px;
 }
-.day{
-    width: 10px;
+
+.profile-card {
+    background-color: #8eaadb;
+    border: 1px solid #4472c4;
+    /* width: 800px; */
+}
+
+.profile-header {
+    background-color: #8eaadb;
+    text-align: center;
+    /* padding: 10px; */
+    /* max-width: 150px; */
+}
+
+.student-photo {
+    width: 80px;
+    height: 100px;
+    /* border: 1px solid #000; */
+}
+
+.timetable-header {
+    background-color: #c4d79b;
+    color: #4b0082;
+    font-weight: bold;
+    /* padding: 5px; */
+    font-size: 13px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #d9d9d9;
+    border: none; border-collapse: collapse;
+}
+
+.timetable th {
+    background-color: #000033;
+    color: white;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #888;
+}
+
+.timetable td {
+    border: 1px solid #888;
+    height: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex: 1 1 100%;
+    }
 }
